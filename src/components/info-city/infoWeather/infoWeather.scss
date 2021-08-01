@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+.info-weather {
+  margin: 1% 8%;
+  border: 3px solid #1f2c3b;
+  border-radius: 4px;
+  background-image: url("https://i.etsystatic.com/11598164/r/il/aae7ca/953297164/il_fullxfull.953297164_3p7s.jpg");
+  font-family: 'Marck Script', cursive;
+  color: white;
+  height: 360px;
+
+  &_content {
+    height: 100%;
+    display: grid;
+    grid-template-areas: "p t" "s t" "d t" "f f";
+    grid-template-rows: 4fr 4fr 4fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    animation: neon2 10s infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes neon2 {
+  0% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 1;
+  }
+  27% {
+    opacity: 0;
+  }
+  28% {
+    opacity: 1;
+  }
+  29% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  64% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+  68% {
+    opacity: 1;
+  }
+  69% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  71% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0;
+  }
+  94% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 9rem;
+  grid-area: t;
+  text-shadow: 0 0 40px rgb(252, 123, 123),
+  0 0 60px rgb(252, 123, 123),
+  0 0 80px rgb(252, 123, 123),
+  0 0 100px rgb(219, 66, 66);
+}
+
+.feels-like,
+.pressure,
+.speed-wind,
+.wind-direction {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10%;
+}
+
+.feels-like {
+  margin: 0 auto 5px auto;
+  grid-area: f;
+  font-size: 1.7rem;
+  text-shadow: 0 0 10px rgb(219, 66, 217),
+  0 0 20px rgb(219, 66, 217),
+  0 0 22px rgb(219, 66, 217),
+  0 0 40px rgb(219, 66, 217);
+}
+
+.pressure {
+  grid-area: p;
+  color: white;
+  text-shadow: 0 0 10px rgb(1, 255, 1),
+  0 0 20px rgb(1, 255, 1),
+  0 0 22px rgb(1, 255, 1),
+  0 0 40px rgb(1, 255, 1);
+}
+
+.speed-wind {
+  grid-area: s;
+  color: #95edff;
+  text-shadow: 0 0 10px rgb(19, 176, 246),
+  0 0 20px rgb(19, 176, 246),
+  0 0 22px rgb(19, 176, 246),
+  0 0 40px rgb(19, 176, 246);
+}
+
+.wind-direction {
+  grid-area: d;
+  color: #fcfc96;
+  text-shadow: 0 0 10px rgb(250, 217, 33),
+  0 0 20px rgb(255, 162, 1),
+  0 0 22px rgb(255, 162, 1),
+  0 0 40px rgb(255, 162, 1);
+}
+
+@media (max-width: 950px) {
+  .temperature {
+    font-size: 6rem;
+  }
+
+  .feels-like {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .info-weather {
+    margin: 1% 8%;
+    border: 3px solid #1f2c3b;
+    border-radius: 4px;
+    height: 30vh;
+
+    &_content {
+      grid-template-rows: 4fr 4fr 4fr 1fr;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: "t p" "t s" "t d" "f f";
+    }
+
+    .temperature {
+      font-size: 3rem;
+      margin: auto;
+    }
+
+    .pressure,
+    .speed-wind,
+    .wind-direction {
+      margin: 2%;
+      text-align: left;
+    }
+  }
+}

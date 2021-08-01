@@ -1,0 +1,30 @@
+.button {
+  border: none;
+  padding: 8px 15px;
+  margin: 0 20px;
+  border-radius: 2px;
+  background-color: #1f2c3b;
+  font-family: Consolas, sans-serif;
+  text-transform: uppercase;
+  font-size: 19px;
+  letter-spacing: 4px;
+  color: #62aed7;
+
+  &:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    transition-delay: 0.2s;
+    box-shadow: 0 0 10px #62aed7, 0 0 40px #49a4a4, 0 0 80px #62aed7;
+    background-color: #62aed7;
+    color: black;
+  }
+
+  &:active {
+    transition: 0.1s;
+    box-shadow: 0 0 10px #49a4a4, 0 0 40px #49a4a4;
+  }
+
+  &:focus {
+    border: none;
+  }
+}

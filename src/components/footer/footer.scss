@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  text-align: center;
+  color: #62aed7;
+
+& a {
+  width: 50%;
+  text-decoration: none;
+  color: #62aed7;
+}
+}
+
+.trademark {
+  width: 50%;
+}
+
+.aboutUs:hover {
+  transition: 0.2s;
+  transition-delay: 0.2s;
+  text-shadow: 0 0 10px #62aed7, 0 0 40px #49a4a4, 0 0 80px #62aed7;
+  color: #aeddf6;
+}

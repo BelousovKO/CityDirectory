@@ -1,0 +1,210 @@
+.registrationForm-display {
+  margin-top: 10%;
+  border: 8px solid #2f2e2e;
+  border-radius: 4px;
+}
+
+.forgotForm,
+.registrationForm {
+  display: grid;
+  grid-template-columns: 250px 210px;
+  grid-gap: 15px;
+  overflow: hidden;
+  border-radius: 2px;
+  z-index: 4;
+  height: auto;
+  transition: .5s;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lightblue;
+  box-shadow: 0 0 5px powderblue, 0 0 10px powderblue, 0 0 18px powderblue;
+  list-style: none;
+
+  &__item {
+    position: relative;
+  }
+
+  .item-password {
+    display: grid;
+
+    &__meter {
+      width: 100%;
+    }
+  }
+
+ .registrationForm__item_wrapper,
+  .item-footnote {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .item-submit {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 2px;
+    font-family: Consolas, sans-serif;
+    text-transform: uppercase;
+    font-size: 19px;
+    letter-spacing: 4px;
+    margin-top: 15px;
+
+    &__enabled {
+      background-color: #1f2c3b;
+      color: #62aed7;
+
+      &:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        transition-delay: 0.2s;
+        background-color: #62aed7;
+        color: black;
+      }
+
+      &:active {
+        transition: 0.1s;
+        box-shadow: 0 0 10px #49a4a4, 0 0 40px #49a4a4;
+      }
+
+      &:focus {
+        border: none;
+      }
+    }
+
+    &__disabled {
+      background-color: #bebcbc;
+      color: #777777;
+
+      &:hover {
+        background-color: #bebcbc;
+        color: #777777;
+      }
+
+      &:active {
+        transition: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .footnote-asterisk {
+    position: absolute;
+    left: -15px;
+    top: calc(50% - 10px);
+  }
+}
+
+.registrationFormClos {
+  height: 0;
+  overflow: hidden;
+}
+
+.input-in-forms {
+  margin: 0;
+  height: 35px;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: white;
+  border: none;
+  text-align: center;
+  width: 100%;
+}
+
+.message-error {
+  font-family: sans-serif;
+  color: red;
+}
+
+.shadow-error {
+  box-shadow: 0 0 10px red;
+}
+
+.shadow-correct {
+  box-shadow: 0 0 10px darkgreen;
+}
+
+.checkPassOk {
+  font-family: sans-serif;
+  color: green;
+}
+
+.input-legend {
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
+
+.warning {
+  position: relative;
+  grid-column: span 2;
+  font-family: sans-serif;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__fake-checkbox {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 40px;
+    background: white;
+    border-radius: 4px;
+  }
+
+  &__fake-checkbox::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 12px;
+    height: 9px;
+    background: url("checkbox_checked.svg");
+    opacity: 0;
+    transition: .2s;
+  }
+
+  &__consent_label {
+    margin-left: 15px;
+    font-family: sans-serif;
+    line-height: 23px;
+    color: red;
+  }
+}
+
+.warning__checkbox:checked + .warning__fake-checkbox::before {
+  opacity: 1;
+}
+
+@media (max-width: 550px) {
+  .registrationForm-display {
+    width: 300px
+  }
+
+  .forgotForm,
+  .registrationForm {
+    display: block;
+  }
+
+  .input-in-forms {
+    height: 25px;
+    font-size: 17px;
+  }
+
+  .input-legend {
+    margin: 7px auto;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .warning {
+    font-size: 12px;
+  }
+}

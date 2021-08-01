@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+.start-page {
+  background-image: url("https://images.wallpaperscraft.ru/image/nochnoj_gorod_doroga_zdaniia_133667_2048x1152.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 96vh;
+  position: relative;
+
+  &_h1__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+  }
+
+  h1 {
+    font-size: 9rem;
+    color: cadetblue;
+    mix-blend-mode: color-dodge;
+    margin: 0;
+  }
+
+  &_small-title {
+    font-family: 'Marck Script', cursive;
+    font-size: 1.5rem;
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    font-weight: 100;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .8),
+    0 0 20px rgba(255, 255, 255, .8),
+    0 0 22px rgba(255, 255, 255, .8),
+    0 0 40px rgba(219, 66, 217, .8),
+    0 0 60px rgba(219, 66, 217, .8),
+    0 0 80px rgba(219, 66, 217, .8),
+    0 0 100px rgba(219, 66, 217, .5);
+    animation: neon 10s infinite;
+    animation-timing-function: linear;
+  };
+}
+@keyframes neon {
+  0% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 1;
+  }
+  27% {
+    opacity: 0;
+  }
+  28% {
+    opacity: 1;
+  }
+  29% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  64% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+  68% {
+    opacity: 1;
+  }
+  69% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  71% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0;
+  }
+  94% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.forgotShadow,
+.regShadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .1);
+  z-index: 3;
+  display: grid;
+  align-content: start;
+  justify-content: center;
+}
+
+.p-title {
+
+  font-size: 1.5rem;
+  color: lightblue;
+  width: 50%;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: black;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.loginForm {
+  position: relative;
+}
+
+.login-message {
+  color: #62aed7;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  font-family: sans-serif;
+}
+
+.login,
+.password {
+  height: 35px;
+  margin: 0 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: #62aed7;
+  border: none;
+  text-align: center;
+}
+
+.restore-password {
+  position: absolute;
+  top: 45px;
+  left: 340px;
+  color: #62aed7;
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.authentication-page {
+  background-image: url("https://images.pexels.com/photos/3602154/pexels-photo-3602154.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 96vh;
+}
+
+.exit-button-container {
+  text-align: end;
+  padding: 10px;
+}
+
+@media (max-width: 980px) {
+  .start-page {
+    height: 94vh;
+
+    h1 {
+      font-size: 6rem;
+    }
+
+    input, button {
+      font-size: 1rem;
+      margin-top: 2%;
+    }
+
+    &_small-title {
+      font-size: 1rem;
+      width: 80%;
+      padding: 5px;
+    }
+  }
+
+  .loginForm {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .restore-password {
+    position: static;
+    grid-column: span 2;
+    margin: 10px auto;
+  }
+
+  .login-message {
+    font-size: .8rem;
+  }
+
+  .authentication-page {
+    min-height: 94vh;
+    input,
+    Button {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .start-page {
+    input, button {
+      margin-top: 2%;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    &_h1__container {
+      height: 30vh;
+    }
+  ;
+  }
+
+  .loginForm {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .restore-password {
+    grid-column: span 1;
+  }
+
+  .login-message {
+    font-size: .8rem;
+    height: 5vh;
+  }
+}

@@ -1,0 +1,59 @@
+h2 {
+  font-family: sans-serif;
+  margin: 5px;
+  text-align: center;
+  color: #62aed7;
+}
+
+.infoWeatherAndCommentList {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.comment-display {
+  &:hover {
+    position: absolute;
+    left: 2%;
+    width: 95%;
+  }
+
+  border: 8px solid black;
+  border-radius: 4px;
+  width: 94%;
+}
+
+.city-not-found {
+  font-family: sans-serif;
+  color: #62aed7;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  h2 {
+    font-size: 1rem;
+    margin: .5%;
+  }
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: .8rem;
+    margin: 5px;
+  }
+
+  .infoWeatherAndCommentList {
+    grid-template-columns: 1fr;
+  }
+
+  .comment-display {
+    width: 90%;
+    margin: 0 auto;
+    &:hover {
+      position: relative;
+      width: 90%;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+}

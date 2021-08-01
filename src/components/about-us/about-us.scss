@@ -1,0 +1,88 @@
+.about-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1% 4%;
+  text-align: center;
+}
+
+.link-exit {
+
+  &:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    transition-delay: 0.2s;
+    box-shadow: 0 0 10px #62aed7, 0 0 40px #49a4a4, 0 0 80px #62aed7;
+    background-color: #62aed7;
+    color: black;
+  }
+
+  display: flex;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  color: #62aed7;
+  font-size: 2rem;
+  background-color: #292929;
+  margin: 15px 15px 0 auto;
+  border-radius: 4px;
+  align-content: center;
+  justify-content: center;
+}
+
+.exit {
+  font-weight: bold;
+}
+
+.frontend-developer,
+.QA-engineer {
+  margin: 0 auto;
+  color: #62aed7;
+  width: 60%;
+
+  & img {
+    width: 40%;
+    margin: 5% auto;
+  }
+}
+
+.exitButton {
+  display: flex;
+  margin: 10px 10px 0 auto;
+  padding: 1px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 2rem;
+  color: #62aed7;
+  background-color: black;
+}
+
+@media (max-width: 900px) {
+  .frontend-developer,
+  .QA-engineer {
+    width: 70%;
+
+    & img {
+      width: 50%;
+    }
+  }
+
+  .QA-title,
+  .frontend-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-us {
+    grid-template-columns: 1fr;
+  }
+
+  .frontend-developer,
+  .QA-engineer {
+    width: 80%;
+
+    & img {
+      width: 60%;
+    }
+  }
+}
